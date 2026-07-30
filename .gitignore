@@ -19,3 +19,15 @@ deploy/*.bundle
 
 # Local database bind-mount (never commit DB files)
 /pgdata/
+
+# Database dumps — never commit (contain user password hashes)
+*.sql
+
+# Built/exported image bundles (exceed GitHub's 100MB limit — rebuild instead)
+dist/
+
+# ELN app and scratch worktrees live in the separate Ereztech-ELN repo,
+# not in this scheduler repo.
+/eln/
+/transfer/
+/.worktrees/
